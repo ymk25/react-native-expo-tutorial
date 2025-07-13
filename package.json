@@ -9,7 +9,8 @@
     "web": "expo start --web",
     "clean": "git clean -xdf .cache .expo android ios node_modules",
     "typecheck": "tsc --noEmit",
-    "lint": "expo lint"
+    "lint": "expo lint --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "expo lint --ext .js,.jsx,.ts,.tsx --fix"
   },
   "dependencies": {
     "@expo/metro-runtime": "~5.0.4",
