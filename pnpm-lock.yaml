@@ -33,15 +33,30 @@ importers:
       '@babel/core':
         specifier: ^7.25.2
         version: 7.28.0
+      '@types/eslint':
+        specifier: ^9.6.1
+        version: 9.6.1
       '@types/react':
         specifier: ~19.0.10
         version: 19.0.14
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^8.36.0
+        version: 8.36.0(@typescript-eslint/parser@8.36.0(eslint@9.31.0)(typescript@5.8.3))(eslint@9.31.0)(typescript@5.8.3)
+      '@typescript-eslint/parser':
+        specifier: ^8.36.0
+        version: 8.36.0(eslint@9.31.0)(typescript@5.8.3)
       eslint:
         specifier: ^9.0.0
         version: 9.31.0
       eslint-config-expo:
         specifier: ~9.2.0
         version: 9.2.0(eslint@9.31.0)(typescript@5.8.3)
+      eslint-plugin-import:
+        specifier: ^2.32.0
+        version: 2.32.0(@typescript-eslint/parser@8.36.0(eslint@9.31.0)(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.31.0)
+      eslint-plugin-react-hooks:
+        specifier: ^5.2.0
+        version: 5.2.0(eslint@9.31.0)
       typescript:
         specifier: ~5.8.3
         version: 5.8.3
@@ -866,6 +881,9 @@ packages:
 
   '@types/babel__traverse@7.20.7':
     resolution: {integrity: sha512-dkO5fhS7+/oos4ciWxyEyjWe48zmG6wbCheo/G2ZnHx4fs3EU6YC6UM8rk56gAjNJ9P3MTH2jo5jb92/K6wbng==}
+
+  '@types/eslint@9.6.1':
+    resolution: {integrity: sha512-FXx2pKgId/WyYo2jXw63kk7/+TY7u7AziEJxJAnSFzHlqTAS3Ync6SvgYAN/k4/PQpnnVuzoMuVnByKK2qp0ag==}
 
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
@@ -4776,6 +4794,11 @@ snapshots:
   '@types/babel__traverse@7.20.7':
     dependencies:
       '@babel/types': 7.28.1
+
+  '@types/eslint@9.6.1':
+    dependencies:
+      '@types/estree': 1.0.8
+      '@types/json-schema': 7.0.15
 
   '@types/estree@1.0.8': {}
 
