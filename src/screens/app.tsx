@@ -1,6 +1,5 @@
 import { type FC } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { registerRootComponent } from "expo";
 import { StatusBar } from "expo-status-bar";
 
 const App: FC = () => {
@@ -21,4 +20,4 @@ const styles = StyleSheet.create({
   },
 });
 
-registerRootComponent(App);
+export default App;

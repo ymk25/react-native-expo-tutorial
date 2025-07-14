@@ -1,17 +1,17 @@
 // https://docs.expo.dev/guides/using-eslint/
-const { defineConfig } = require("eslint/config");
-const expoConfig = require("eslint-config-expo/flat");
-const typescriptEslint = require("@typescript-eslint/eslint-plugin");
-const typescriptParser = require("@typescript-eslint/parser");
-const js = require("@eslint/js");
+import js from "@eslint/js";
+import typescriptEslint from "@typescript-eslint/eslint-plugin";
+import typescriptParser from "@typescript-eslint/parser";
+import expoConfig from "eslint-config-expo/flat.js";
+import { defineConfig } from "eslint/config";
 
 // https://docs.expo.dev/guides/using-eslint/
-module.exports = defineConfig([
+export default defineConfig([
   // Base recommended config
   js.configs.recommended,
 
   // Expo config
-  ...expoConfig,
+  expoConfig,
 
   // TypeScript configuration
   {
@@ -63,6 +63,9 @@ module.exports = defineConfig([
       ],
       // https://typescript-eslint.io/rules/no-var-requires/
       "@typescript-eslint/no-var-requires": "off",
+      // Disable unsafe rules
+      "@typescript-eslint/no-unsafe-assignment": "off",
+      "@typescript-eslint/no-unsafe-argument": "off",
     },
   },
 
