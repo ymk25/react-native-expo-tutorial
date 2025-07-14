@@ -1,5 +1,6 @@
 import { type FC } from "react";
 import { StyleSheet, Text, View } from "react-native";
+import { registerRootComponent } from "expo";
 import { StatusBar } from "expo-status-bar";
 
 const App: FC = () => {
@@ -14,10 +15,10 @@ const App: FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#25292e",
     alignItems: "center",
     justifyContent: "center",
   },
 });
 
-export default App;
+registerRootComponent(App);
