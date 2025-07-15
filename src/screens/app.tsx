@@ -12,6 +12,7 @@ const PlaceholderImage =
 
 const App: FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [showAppOptions, setShowAppOptions] = useState(false);
 
   const pickImageAsync = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
@@ -22,6 +23,7 @@ const App: FC = () => {
     if (!result.canceled) {
       console.log(result);
       setSelectedImage(result.assets[0].uri);
+      setShowAppOptions(true);
     } else {
       alert("You did not select any image.");
     }
@@ -35,10 +37,17 @@ const App: FC = () => {
           selectedImage={selectedImage}
         />
       </View>
-      <View style={styles.footerContainer}>
-        <Button theme="primary" label="写真を選択" onPress={pickImageAsync} />
-        <Button label="この写真を使用" />
-      </View>
+      {showAppOptions ? (
+        <View />
+      ) : (
+        <View style={styles.footerContainer}>
+          <Button theme="primary" label="写真を選択" onPress={pickImageAsync} />
+          <Button
+            label="この写真を使用"
+            onPress={() => setShowAppOptions(true)}
+          />
+        </View>
+      )}
       <StatusBar style="auto" />
     </View>
   );
