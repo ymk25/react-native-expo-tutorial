@@ -14,6 +14,7 @@ type EmojiStickerProps = {
 
 export const EmojiSticker: FC<EmojiStickerProps> = (props) => {
   const scaleImage = useSharedValue(props.imageSize);
+
   const imageStyle = useAnimatedStyle(() => {
     return {
       width: withSpring(scaleImage.value),
@@ -29,11 +30,6 @@ export const EmojiSticker: FC<EmojiStickerProps> = (props) => {
       }
     });
 
-  const scaleImageWithSpring = useAnimatedStyle(() => {
-    return {
-      width: withSpring(scaleImage.value),
-    };
-  });
   return (
     <View style={{ top: -350 }}>
       <GestureDetector gesture={doubleTap}>
