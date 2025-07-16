@@ -48,7 +48,7 @@ export const EmojiSticker: FC<EmojiStickerProps> = (props) => {
 
   return (
     <GestureDetector gesture={drag}>
-      <Animated.View style={{ top: -350 }}>
+      <Animated.View style={[containerStyle, { top: -350 }]}>
         <GestureDetector gesture={doubleTap}>
           <Animated.Image
             source={props.stickerSource}
