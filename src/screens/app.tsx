@@ -164,4 +164,6 @@ const styles = StyleSheet.create({
   },
 });
 
+export default App;
+
 registerRootComponent(App);
